@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <title>Site LaFusion2024</title>
+<head>
+    <title>LaFusion2024</title>
     <meta name="description" content="Site da edição 2024 do LaFusion" />
     <meta property="og:title" content="Site LaFusion2024" />
     <meta property="og:description" content="Site da edição 2024 do LaFusion" />
@@ -12,7 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
-
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+<!--
     <style data-tag="reset-style-sheet">
       html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
     </style>
@@ -34,7 +40,7 @@
 
         null
       }
-    </style>
+    </style> -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/animate.css@4.1.1/animate.css"
@@ -54,58 +60,67 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
-  </head>
-  <body>
-    <link rel="stylesheet" href="./style.css" />
-    <div>
-      <link href="./index.css" rel="stylesheet" />
+</head>
 
-      <div class="home-container">
-        <header data-role="Accordion" class="home-header">
-          <img
+
+<body>
+    <!-- Scroll to section Script-->
+    <script>
+    function scrollToSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    </script>
+    <!-- Scroll to section Script-->
+
+    <section class="header">
+        <div class="white-bar-top">
+            <img
             alt="logo"
-            src="https://photos.app.goo.gl/TrP6A7z6PuZV6Kkj7"
+            src="public/LaFusion 2024 hori.png"
             class="home-image"
-          />
-        </header>
+            />
+        </div>
         <div class="home-banner">
+          <!-- TEXTOS TITULO -->
           <h1 class="home-text">
             <span>The Latin American Workshop on Information Fusion</span>
             <br />
           </h1>
-          <span class="home-text03">
+          <h2 class="home-text03">
             <span>Federal University of Rio de Janeiro - Brazil</span>
-            <br />
             <span>(Hybrid)</span>
-          </span>
-          <div class="home-nav">
-            <nav
-              class="navigation-links1-nav navigation-links1-root-class-name15"
-            >
-              <span class="navigation-links1-text"><span>Home</span></span>
-              <span class="navigation-links1-text1">
-                <span>Addresses</span>
-              </span>
-              <span class="navigation-links1-text2"><span>Program</span></span>
-              <span class="navigation-links1-text3">
-                <span>Topic of Interest</span>
-              </span>
-              <span class="navigation-links1-text4">
-                <span>Important Dates</span>
-              </span>
-              <span class="navigation-links1-text5">
-                <span>Organization</span>
-              </span>
-              <span class="navigation-links1-text6">
-                <span>Technical Program Committe</span>
-              </span>
-            </nav>
-          </div>
+          </h2>
+          
+         
+          <!-- BARRA DE NAVEGAÇAO -->
+          
+          <nav>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+
+                    <ul>
+                    <li><a onclick="scrollToSection('info')">Home</a></li>
+                    <li><a onclick="scrollToSection('endereco')">Addresses</a></li>
+                    <li><a onclick="scrollToSection('program')">Program</a></li>
+                    <li><a onclick="scrollToSection('topics')">Topics of Interest</a></li>
+                    <li><a onclick="scrollToSection('dates')">Important Dates</a></li>
+                    <li><a onclick="scrollToSection('org')">Organization</a></li>
+                    <li><a onclick="scrollToSection('org')">Technical Program Comitte</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+          </nav>
+
         </div>
-        <div class="home-inormation-about-event">
-          <span class="home-text07">
-            <span class="home-text08">
-              The First Latin American Workshop on Information Fusion (LAFUSION
+    </section>
+    <!-- Textos no inicio da pagina -->
+    <section class="information" id="info">
+        <div class="row">
+            <div class="column"> 
+                <p>The First Latin American Workshop on Information Fusion (LAFUSION
               2023) is a workshop focusing on the latest research results on the
               Information Fusion in Latin America. The goal of this workshop is
               to create a community of Information Fusion researchers in Latin
@@ -113,45 +128,45 @@
               accepted papers are expected to present their work in a plenary
               session as part of the main workshop program. Proceedings will be
               indexed in the IEEE Digital Library, SCOPUS, and other prominent
-              digital libraries.
-            </span>
-            <br class="home-text09" />
-            <br class="home-text10" />
-            <span class="home-text11">
-              Information fusion is a multidisciplinary field that focuses on
+              digital libraries.</p>
+            </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <p>Information fusion is a multidisciplinary field that focuses on
               combining and integrating information from diverse sources to
               improve the accuracy, completeness, and reliability of the
               resulting information. It involves the process of merging data or
               knowledge from multiple sensors, databases, or information systems
               to generate a unified and coherent representation of the
-              underlying reality.
-            </span>
-            <br class="home-text12" />
-            <br class="home-text13" />
-            <span class="home-text14">
-              The main goal of information fusion is to extract meaningful and
+              underlying reality.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <p>The main goal of information fusion is to extract meaningful and
               actionable insights by leveraging the strengths of individual
               information sources while compensating for their limitations,
               uncertainties, or redundancies. It aims to provide a more
               comprehensive and accurate understanding of a given situation or
               phenomenon than what can be achieved by using individual sources
-              in isolation.
-            </span>
-            <br class="home-text15" />
-            <br class="home-text16" />
-            <span class="home-text17">
-              Information fusion techniques typically involve various processes,
+              in isolation.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <p>Information fusion techniques typically involve various processes,
               including data preprocessing, feature extraction, data
               association, probabilistic modeling, decision-making, and
               knowledge representation. These processes may utilize methods from
               diverse disciplines such as statistics, signal processing, pattern
               recognition, artificial intelligence, machine learning, and
-              cognitive science.
-            </span>
-            <br class="home-text18" />
-            <br class="home-text19" />
-            <span class="home-text20">
-              Applications of information fusion are widespread and can be found
+              cognitive science.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <p>Applications of information fusion are widespread and can be found
               in fields such as surveillance and intelligence, remote sensing,
               robotics, autonomous systems, medical diagnosis, weather
               forecasting, transportation systems, and cybersecurity. By
@@ -162,281 +177,186 @@
               environments. Several Latin American problems could be solved by
               Information Fusion. We are looking to form a Forum to debate the
               usage of Information Fusion to produce solutions for the
-              challenges in the region.
-            </span>
-            <br />
-            <br />
-          </span>
-        </div>
-        <div class="home-adresses">
-          <span class="Heading home-text23">Address</span>
-          <div class="home-container01">
-            <div class="home-registration-form">
-              <div class="home-container02"></div>
-              <a
-                href="https://lafusion.cos.ufrj.br/#:~:text=ADDRESSES-,Registration%20form,-Live%20stream%20on"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="home-link"
-              >
-                <h1 class="home-text24">Registration form</h1>
-              </a>
-            </div>
-            <div class="home-live-stream-on-youtube">
-              <div class="home-container03"></div>
-              <a
-                href="https://lafusion.cos.ufrj.br/#:~:text=Live%20stream%20on%20YouTube"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="home-link1"
-              >
-                <h1 class="home-text25">Live stream on YouTube</h1>
-              </a>
-            </div>
+              challenges in the region.</p>
           </div>
         </div>
-        <div class="home-venue">
-          <span class="Heading home-text26">Venue</span>
-          <h1>
-            <span>
-              Av. Athos da Silveira Ramos, 149 - Bloco G, Sala 122 - Cidade
-              Universitária da Universidade Federal do Rio de Janeiro, Rio de
-              Janeiro - RJ, 21941-909, Brasil
-            </span>
-            <br />
-          </h1>
-          <div class="home-container04">
-            <div class="home-container05">
-              <iframe
-                height="100%"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.429709796457!2d-43.23256592377959!3d-22.860579436222988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9979377b0a6a29%3A0xbffe1690f4bd1ff6!2sAv.%20Athos%20da%20Silveira%20Ramos%2C%20149%20-%20g%20122%20-%20Cidade%20Universit%C3%A1ria%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021941-611!5e0!3m2!1spt-BR!2sbr!4v1715180574535!5m2!1spt-BR!2sbr"
-                width="600"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-        <div class="home-program">
-          <span class="Heading home-text30">Program</span>
-          <div class="home-opening">
-            <div class="home-container06"></div>
-            <h1 class="home-text31">09h - Opening</h1>
-          </div>
-          <div class="home-paper-season">
-            <div class="home-container07"></div>
-            <h1 class="home-text32">10h - Paper Season 1</h1>
-          </div>
-          <div class="home-paper-season1">
-            <div class="home-container08"></div>
-            <h1 class="home-text33">
-              <span class="home-text34">11h - Paper Season 2</span>
-              <br />
-            </h1>
-          </div>
-          <div class="home-keynote">
-            <div class="home-container09"></div>
-            <h1 class="home-text36">
-              <span class="home-text37">12h - Keynote 1</span>
-              <br />
-            </h1>
-          </div>
-          <div class="home-lunch">
-            <div class="home-container10"></div>
-            <h1 class="home-text39">13h - Lunch</h1>
-          </div>
-          <div class="home-keynote1">
-            <div class="home-container11"></div>
-            <h1 class="home-text40">
-              <span class="home-text41">14h - Keynote 2</span>
-              <br />
-            </h1>
-          </div>
-          <div class="home-paper-season2">
-            <div class="home-container12"></div>
-            <h1 class="home-text43">
-              <span class="home-text44">15h - Paper Season 3</span>
-              <br />
-            </h1>
-          </div>
-          <div class="home-paper-season3">
-            <div class="home-container13"></div>
-            <h1 class="home-text46">
-              <span class="home-text47">16h - Paper Season 4</span>
-              <br />
-            </h1>
-          </div>
-          <div class="home-paper-season4">
-            <div class="home-container14"></div>
-            <h1 class="home-text49">
-              <span class="home-text50">17h - Paper Season 5</span>
-              <br />
-            </h1>
-          </div>
-          <div class="home-closing">
-            <div class="home-container15"></div>
-            <h1 class="home-text52">18h - Closing</h1>
-          </div>
-        </div>
-        <div class="home-topic-of-interest">
-          <span class="Heading home-text53">Topic of interest</span>
-          <span class="home-text54">
-            Probability theory, Bayesian inference, argumentation,
-            Dempster-Shafer theory, possibility and fuzzy set theory, rough
-            sets, logic fusion, preference aggregation, decision theory, random
-            sets, finite point processes and others.
-          </span>
-          <div class="home-container16">
-            <div class="home-theory-and-representation">
-              <div class="home-container17"></div>
-              <h1 class="home-theory-and-representaion">
-                <span>Theory and Representation</span>
-                <br />
-              </h1>
-              <span class="home-text57">
-                Probability theory, Bayesian inference, argumentation,
-                Dempster-Shafer theory, possibility and fuzzy set theory, rough
-                sets, logic fusion, preference aggregation, decision theory,
-                random sets, finite point processes and others.
-              </span>
-            </div>
-            <div class="home-algorithms">
-              <div class="home-container18"></div>
-              <h1 class="home-a-lghorithms">Algorithms</h1>
-              <span class="home-text58">
-                Cognitive methods, signal processing and localisation,
-                recognition, classification, identification, nonlinear
-                filtering, data association, tracking, prediction,
-                situation/impact assessment, alignment and registration,
-                pattern/behavioural analysis, image fusion, fusion
-                architectures, resource management, machine learning and
-                artificial intelligence, topic modelling, natural language
-                processing, contextual adaptation, anomaly/change detection.
-              </span>
-            </div>
-            <div class="home-application">
-              <div class="home-container19"></div>
-              <h1 class="home-application1">
-                <span class="home-text59">Application</span>
-                <br />
-              </h1>
-              <span class="home-text61">
-                Soft-hard fusion, autonomous systems, defence/security,
-                robotics, intelligent transportation, mining/manufacturing,
-                wireless sensor networks, economics, finance, fintech,
-                environmental monitoring medical care/e-health, bioinformatics,
-                radio astronomy, critical infrastructure protection, condition
-                monitoring precision agriculture, video streaming, streaming and
-                sketching and other emerging applications.
-              </span>
-            </div>
-            <div class="home-methods-tools">
-              <div class="home-container20"></div>
-              <h1 class="home-methods-tools1">
-                <span class="home-text62">Methods/Tools</span>
-                <br />
-              </h1>
-              <span class="home-text64">
-                Sequential inference, data mining. graph analysis,
-                ontologies/semantics, modelling/realisation/evaluation,
-                target/sensor modelling, benchmarks/testbeds, trust in fusion
-                systems, computational methods, cloud/edge computing/fusion,
-                fusion performance.
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="home-topic-of-interest1">
-          <span class="Heading home-important-dates">Important Dates</span>
-          <div class="home-container21">
-            <div class="home-theory-and-representation1">
-              <div class="home-container22"></div>
-              <h1 class="home-paper-submission">
-                <span>Paper Submission</span>
-                <br />
-              </h1>
-            </div>
-            <div class="home-acceptance-notice">
-              <div class="home-container23"></div>
-              <h1 class="home-a-lghorithms1">Acceptance Notice</h1>
-            </div>
-            <div class="home-camera-ready-submission">
-              <div class="home-container24"></div>
-              <h1 class="home-application2">
-                <span class="home-text67">Camera Ready Submission</span>
-                <br />
-              </h1>
-            </div>
-            <div class="home-workshop-date">
-              <div class="home-container25"></div>
-              <h1 class="home-workshop-date1">
-                <span class="home-text69">Workshop Date</span>
-                <br />
-              </h1>
-            </div>
-          </div>
-        </div>
-        <div class="home-organization">
-          <span class="Heading home-organization1">Organization</span>
-          <div class="home-container26">
-            <div class="home-cracha">
-              <div class="home-foto">
-                <img
-                  alt="image"
-                  src="https://lafusion.cos.ufrj.br/img/claudio-miceli.jpeg"
-                  class="home-image1"
-                />
-              </div>
-              <h1 class="home-claudio-miceli">Claudio Miceli</h1>
-            </div>
-            <div class="home-cracha1">
-              <div class="home-foto1">
-                <img
-                  alt="image"
-                  src="https://lafusion.cos.ufrj.br/img/claudio-miceli.jpeg"
-                  class="home-image2"
-                />
-              </div>
-              <h1 class="home-claudio-miceli1">Claudio Miceli</h1>
-            </div>
-          </div>
-        </div>
-        <div class="home-technical-program-committee">
-          <span class="Heading home-important-dates1">
-            Technical Program Committee
-          </span>
-        </div>
-        <header data-role="Accordion" class="home-footer">
-          <div class="home-container27">
-            <img
-              src="https://lafusion.cos.ufrj.br/img/isif-logo.png"
-              alt="image"
-              class="home-image3"
-            />
-            <img
-              src="https://lafusion.cos.ufrj.br/img/pesc-logo.png"
-              alt="image"
-              class="home-image4"
-            />
-            <img
-              src="https://lafusion.cos.ufrj.br/img/grain-logo.png"
-              alt="image"
-              class="home-image5"
-            />
-            <img
-              src="https://lafusion.cos.ufrj.br/img/c4i-logo.png"
-              alt="image"
-              class="home-image6"
-            />
-          </div>
-        </header>
+    </section>
+    <!-- formulario de registro -->
+    <section class="form_e_live" id="form">
+      <div class="registration_form">
+        <div class="color_rect"></div>
+        <a class="outside_link" href="https://lafusion.cos.ufrj.br/#:~:text=ADDRESSES-,Registration%20form,-Live%20stream%20on">
+          <h1>Registration Form</h1>
+        </a>
       </div>
-    </div>
-    <script
-      defer=""
-      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
-    ></script>
-  </body>
-</html>
+      <!-- link para live no youtube -->
+      <div class="live">
+        <div class="color_rect"></div>
+        <a class="outside_link" href="https://lafusion.cos.ufrj.br/#:~:text=ADDRESSES-,Registration%20form,-Live%20stream%20on">
+          <h1>Livestream on Youtube</h1>
+        </a>
+      </div>
+    </section>
+    
+    <!-- link pro g maps -->
+    <section class="endereco" id="endereco">
+      <div class="row">
+        <h3>Venue</h3>
+        <h3> Av. Athos da Silveira Ramos, 149 - Bloco G, Sala 122 - Cidade Universitária da Universidade Federal do Rio de Janeiro, Rio de Janeiro - RJ, 21941-909, Brasil</h3>
+      </div>
+      <div class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.528722078973!2d-43.23493962579184!3d-22.856919179290266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9979386e95f2e1%3A0x20a7d1ce2f645285!2sCentro%20de%20Ci%C3%AAncias%20Matem%C3%A1ticas%20e%20da%20Natureza%20(CCMN)%20-%20UFRJ!5e0!3m2!1spt-BR!2sbr!4v1695149831210!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+    <!-- cronograma -->
+    <section class="program" id="program">
+      <div class="row"><h1>Program</h1></div>
+      <div class="row">
+        <div class="rectangle">
+          <div class="color_rect"></div>
+          
+          <h3>09h - Opening</h3>
+        </div>
+        <div class="rectangle">
+          <div class="color_rect"></div>
+          
+          <h3>10h - Paper Season 1</h3>
+        </div>
+        <div class="rectangle">
+          <div class="color_rect"></div>
+          
+          <h3>11h - Paper Season 2</h3>
+        </div>
+        <div class="rectangle">
+          <div class="color_rect"></div>
+          
+          <h3>12h - Keynote 1</h3>
+        </div>
+        <div class="rectangle">
+          <div class="color_rect"></div>
+          
+          <h3>13h - Lunch</h3>
+        </div>
+        <div class="rectangle">
+          <div class="color_rect"></div>
+          
+          <h3>14h - Keynote 2</h3>
+        </div>
+        <div class="rectangle">
+          <div class="color_rect"></div>
+          
+          <h3>15h - Paper Season 3</h3>
+        </div>
+        <div class="rectangle">
+          <div class="color_rect"></div>
+          
+          <h3>16h - Paper Season 4</h3>
+        </div>
+        <div class="rectangle">
+          <div class="color_rect"></div>
+          
+          <h3>17h - Paper Season 5</h3>
+        </div>
+        <div class="rectangle">
+          <div class="color_rect"></div>
+          
+          <h3>18h - Closing</h3>
+        </div>
+      </div>
+    </section>
+    <!-- topicos de interesse -->
+    <section class="topics" id="topics">
+      <div class="row">
+        <div class="whiterec">
+          <h3>Topics of Interest</h3>
+          <p>Probability theory, Bayesian inference, argumentation, Dempster-Shafer theory, possibility and fuzzy set theory, rough sets, logic fusion, preference aggregation, decision theory, random sets, finite point processes and others.</p>
+        </div>
+        
+        <div class="simplerec">
+          <h3>Theory and Representation</h3>
+          <p>Probability theory, Bayesian inference, argumentation, Dempster-Shafer theory, possibility and fuzzy set theory, rough sets, logic fusion, preference aggregation, decision theory, random sets, finite point processes and others.</p>
+        </div>
+        <div class="simplerec">
+          <h3>Algorithms</h3>
+          <p>Cognitive methods, signal processing and localisation, recognition, classification, identification, nonlinear filtering, data association, tracking, prediction, situation/impact assessment, alignment and registration, pattern/behavioural analysis, image fusion, fusion architectures, resource management, machine learning and artificial intelligence, topic modelling, natural language processing, contextual adaptation, anomaly/change detection.</p>
+        </div>
+        <div class="simplerec">
+          <h3>Application</h3>
+          <p>Soft-hard fusion, autonomous systems, defence/security, robotics, intelligent transportation, mining/manufacturing, wireless sensor networks, economics, finance, fintech, environmental monitoring medical care/e-health, bioinformatics, radio astronomy, critical infrastructure protection, condition monitoring precision agriculture, video streaming, streaming and sketching and other emerging applications.</p>
+        </div>
+        <div class="simplerec">
+          <h3>Methods/Tools</h3>
+          <p>Sequential inference, data mining. graph analysis, ontologies/semantics, modelling/realisation/evaluation, target/sensor modelling, benchmarks/testbeds, trust in fusion systems, computational methods, cloud/edge computing/fusion, fusion performance.</p>
+        </div>
+      </div>
+    </section>
+    <!-- datas importantes -->
+    <section class="important_dates" id="dates">
+      <div class="whiterec"><h3>Important Dates</h3></div>
+      <div class="row">
+        
+        <div class="simplerec">
+          <h3>Paper Submission</h3>
+        </div>
+        <div class="simplerec">
+          <h3>Acceptance Notice</h3>
+        </div>
+        <div class="simplerec">
+          <h3>Camera Ready Submission</h3>
+        </div>
+        <div class="simplerec">
+          <h3>Workshop Date</h3>
+        </div>
+      </div>
+    </section>
+    <!-- Organização -->
+    <section class="organizacao" id="org">
+      
+      <h3>Organization & Technical Program Comitte</h3>
+      <div class="row">
+        <div class="imgbox">
+          <img src="/public/claudio-miceli.jpeg">
+        </div>
+        <div class="info">
+          <h3>Claudio Miceli de Farias</h3>
+          <p>Federal University of Rio de Janeiro, Brazil</p>
+        </div>
+      </div>
+    <!-- Technical Program Committee -->
+<!--
+      <h3>Technical Program Committee</h3>
+      <div class="row">
+        <div class="imgbox">
+          <img src="/public/claudio-miceli.jpeg">
+        </div>
+        <h3>Claudio Miceli</h3>
+      </div>
+-->
+    </section>
+    <!-- footer -->
+<!---------JavaScript para Toggle Menu --------------->
+<script>
+  var navLinks = document.getElementById("navLinks")
+
+  function showMenu(){
+    navLinks.style.right = "0"
+  }
+  function hideMenu(){
+    navLinks.style.right = "-200px"
+  }
+</script>
+<!----------------------------------------------------------->
+
+
+    <section class="footer">
+      <div class="row">
+        <div class="column"><img src="/public/isif-logo.png"></div>
+        <div class="column"><img src="/public/pesc-logo.png"></div>
+        <div class="column"><img src="/public/grain-logo.png"></div>
+        <div class="column"><img src="/public/c4i-logo.png"></div>
+      </div>
+    </section>
+</body>
+
+
+
