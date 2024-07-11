@@ -187,6 +187,9 @@ nav .fa{
 }
 
 @media(max-width: 700px){
+    .nav-bar{
+      background-color: transparent;
+    }
     .nav-links ul li{
         display: block;
     }
