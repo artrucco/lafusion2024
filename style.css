@@ -452,6 +452,12 @@ nav .fa{
   width: 50%;
   
 }
+@media(max-width: 700px){
+  .important_dates .simplerec{
+    justify-content: center;
+  }
+}
+
 /* organizacao */
 .organizacao{
   display: flex;
