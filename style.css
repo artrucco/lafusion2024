@@ -268,6 +268,21 @@ nav .fa{
 .live .color_rect{
   background-color: var(--co32azul);
 }
+/* Submission */
+.submission-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0px;
+}
+.submission {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  gap: 10px;
+}
+
 /* localizacao no google maps */
 .endereco{
   display: flex;
